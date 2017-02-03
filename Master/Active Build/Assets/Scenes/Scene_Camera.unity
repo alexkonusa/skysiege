@@ -585,39 +585,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1936756316}
   m_RootOrder: 0
---- !u!1 &476932684
+--- !u!1 &616763845
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 476932686}
-  - 114: {fileID: 476932685}
+  - 4: {fileID: 616763847}
+  - 114: {fileID: 616763846}
   m_Layer: 0
-  m_Name: GameData
+  m_Name: GameManagers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &476932685
+--- !u!114 &616763846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 476932684}
+  m_GameObject: {fileID: 616763845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41656b07836e9e64ebdb8c5fbe353727, type: 3}
+  m_Script: {fileID: 11500000, guid: ccd091e8086e4c34faa3c3e9c716a64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &476932686
+  currentObject: {fileID: 0}
+--- !u!4 &616763847
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 476932684}
+  m_GameObject: {fileID: 616763845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 218.61185, y: 56.066467, z: 34.0625}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1100,9 +1101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b56113897c5fa4b41b39b795e09f1313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
+  ID: 1
   avalible_Ships: 1
   avalibleShip_Display: {fileID: 1654706706}
+  slotButton: {fileID: 1042937220}
+  shipPrefab: {fileID: 1000013577092700, guid: 2662ec0dd7198f245a05f11c70ca92c4, type: 2}
 --- !u!1 &1091805365
 GameObject:
   m_ObjectHideFlags: 0
