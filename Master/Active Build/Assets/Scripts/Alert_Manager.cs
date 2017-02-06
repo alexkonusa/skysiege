@@ -25,7 +25,7 @@ public class Alert_Manager : MonoBehaviour
 	void Update () 
 	{
 
-		FetchAlertText(1);
+		FetchAlertText(0);
 	
 	}
 
