@@ -4,6 +4,8 @@ using System.Collections;
 public class _Grid_Spawner : MonoBehaviour 
 {
 
+	//Will go over this shit later 
+
 	int numObjects = 20;
 	int numObjects2 = 25;
 	public GameObject prefab;
