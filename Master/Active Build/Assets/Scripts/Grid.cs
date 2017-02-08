@@ -13,6 +13,8 @@ public class Grid : MonoBehaviour
 	BuildManager buildManager;
 	private Color gridStartColor;
 
+	Alert_Manager alertManager;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -21,6 +23,9 @@ public class Grid : MonoBehaviour
 		buildManager = GameObject.Find ("GameManagers").GetComponent<BuildManager> ();
 		gridStartColor = _renderer.material.color;
 	
+
+		alertManager = GameObject.Find("Canvas").GetComponent<Alert_Manager>();
+
 	}
 
 	void OnMouseDown ()
@@ -33,6 +38,8 @@ public class Grid : MonoBehaviour
 				
 					{
 						Debug.Log ("YOU CAN BUILD HERE");
+						alertManager.FetchAlertText(1);
+						
 						buildObject = buildManager.currentObject;
 
 						Instantiate (buildObject, transform.position, transform.rotation);
@@ -48,6 +55,7 @@ public class Grid : MonoBehaviour
 					{
 
 						Debug.Log ("PLEASE SELECT A SHIP TO DEPLOY");
+						alertManager.FetchAlertText(2);
 					}
 				} 
 
@@ -56,6 +64,7 @@ public class Grid : MonoBehaviour
 				{
 
 					Debug.Log ("UPS YOU CAN'T FUCKING BUILD HERE");
+					alertManager.FetchAlertText(0);
 
 				}
 			} 

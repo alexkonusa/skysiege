@@ -7,8 +7,9 @@ public class Alert_Manager : MonoBehaviour
 
 	public GameObject alertPanel;
 	public Transform canvas;
-
+	public Transform parentPanel;
 	public Text alertString;
+
 
 	AlertList alertList;
 	// Use this for initialization
@@ -16,26 +17,18 @@ public class Alert_Manager : MonoBehaviour
 	{
 
 		alertList = GameObject.Find("GameManagers").GetComponent<AlertList>();
-		
 
 	
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
 
-		FetchAlertText(0);
-	
-	}
-
-	void FetchAlertText(int  idToFetch)
+	public void FetchAlertText(int  idToFetch)
 	{
-		InstantiateAlertPanel(true);
 
 		string textToDisplay = alertList.alertDataBase[idToFetch];
 
 		alertString.text = textToDisplay;
+
+		InstantiateAlertPanel(true);
 
 	}
 
@@ -46,10 +39,10 @@ public class Alert_Manager : MonoBehaviour
 		{
 
 			GameObject goodAlertBox = Instantiate (alertPanel, transform.position, transform.rotation) as GameObject;
-			goodAlertBox.transform.SetParent (canvas, true);
+			goodAlertBox.transform.SetParent (parentPanel, false);
 
 
-		}
+		}	
 
 	}
 }

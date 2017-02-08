@@ -10,10 +10,11 @@ public class AlertList : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		alertDataBase = new string[2];
+		alertDataBase = new string[3];
 
 		alertDataBase[0] = "You Can't Build Here";
-		alertDataBase[1] = "FUCK OFF";
+		alertDataBase[1] = "Ship Has Been Built!";
+		alertDataBase[2] = "Please Select A ship to Deploy";
 
 
 	}
