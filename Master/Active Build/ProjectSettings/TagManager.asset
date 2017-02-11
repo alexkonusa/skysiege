@@ -6,6 +6,7 @@ TagManager:
   tags:
   - invSlots
   - Canvas
+  - HexObj
   layers:
   - Default
   - TransparentFX
