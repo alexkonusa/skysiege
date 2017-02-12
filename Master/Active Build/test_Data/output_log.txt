@@ -16,17 +16,17 @@ Platform assembly: D:\Group Project\Group Project\test_Data\Managed\UnityEngine.
 Loading D:\Group Project\Group Project\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\Group Project\Group Project\test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading D:\Group Project\Group Project\test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.103 seconds
+- Completed reload, in  0.055 seconds
 Platform assembly: D:\Group Project\Group Project\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Group Project\Group Project\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.482484 ms
+UnloadTime: 9.169534 ms
 Hex_Hub
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2bc4 -> priority: 1 
+  Thread -> id: 3d48 -> priority: 1 
