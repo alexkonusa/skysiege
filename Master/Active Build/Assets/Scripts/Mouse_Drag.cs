@@ -12,13 +12,7 @@ public class Mouse_Drag : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		//this.transform.position = Input.mousePosition;
 	}
 
-	void OnMouseEnter ()
-	{
-
-			this.transform.position = Input.mousePosition;
-
-	}
 }

@@ -74,6 +74,7 @@ GameObject:
   - 222: {fileID: 222000011393874384}
   - 114: {fileID: 114000013503125458}
   - 114: {fileID: 114000010081159092}
+  - 114: {fileID: 114000010299238688}
   m_Layer: 5
   m_Name: Build_ObjSlot
   m_TagString: Untagged
@@ -116,6 +117,18 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
+--- !u!114 &114000010299238688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011969061204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74a52c9ea3f67e44a03ed1387ce19a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  this_Building: {fileID: 0}
 --- !u!114 &114000012191644574
 MonoBehaviour:
   m_ObjectHideFlags: 1
