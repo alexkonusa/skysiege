@@ -7,6 +7,7 @@ public class Grid_Spawner : GridDB
 
 	public GameObject hexPrefabToInst; //Our 3D Hex Model
 	public GameObject hexAiDeploymentSprite; 
+	public GameObject hexShipDeploymentSprite; 
 
 	public GameObject hexGridPrefab; //Hex Grid Sprite
 	public Transform hexParent; //Parent "Map"
@@ -22,7 +23,7 @@ public class Grid_Spawner : GridDB
 	//**** Hard Codded Layers of Interactable Hex's ****//
 	public List<GameObject> hexLayerOne = new List<GameObject>(); //Player Base Hex's
 	public List<GameObject> hexLayerTwo = new List<GameObject>(); //Player Ship Deployment Hex's
-	public List<GameObject> hexLayerTree = new List<GameObject>(); //AI Hex's
+	public List<GameObject> hexLayerThree = new List<GameObject>(); //AI Hex's
 
 	// Use this for initialization
 	void Start () 
@@ -94,6 +95,14 @@ public class Grid_Spawner : GridDB
 
 		}
 
+		//*************** AI Layer*************** 
+		for (int i = 0; i < LayerThree.Length; i++) 
+		{
+			string names = LayerThree[i];
+			hexLayerThree.Add(GameObject.Find(names));
+
+		}
+
 	}
 
 	void HexLayerCreation ()
@@ -156,11 +165,30 @@ public class Grid_Spawner : GridDB
 		{
 			
 			//Instantiate Our Object
-			GameObject hexAISprite = (GameObject)Instantiate(hexAiDeploymentSprite, hexLayerTwo[i].transform.position, 
+			GameObject hexShipSprite = (GameObject)Instantiate(hexShipDeploymentSprite, hexLayerTwo[i].transform.position, 
 				hexLayerTwo[i].transform.rotation) as GameObject;
 
 			//Parenting and Naming 
 			Transform hexParent = hexLayerTwo[i].transform;
+			hexShipSprite.transform.localPosition = Vector3.zero;
+
+			hexShipSprite.transform.SetParent(hexParent, false);
+
+			hexParent.transform.GetChild(0).gameObject.SetActive(false);
+
+
+		}
+
+		//Ship Deploy Layer
+		for (int i = 0; i < hexLayerThree.Count; i++) 
+		{
+
+			//Instantiate Our Object
+			GameObject hexAISprite = (GameObject)Instantiate(hexAiDeploymentSprite, hexLayerThree[i].transform.position, 
+				hexLayerThree[i].transform.rotation) as GameObject;
+
+			//Parenting and Naming 
+			Transform hexParent = hexLayerThree[i].transform;
 			hexAISprite.transform.localPosition = Vector3.zero;
 
 			hexAISprite.transform.SetParent(hexParent, false);
