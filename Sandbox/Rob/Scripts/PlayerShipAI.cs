@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AIMovement : MonoBehaviour {
+public class PlayerShipAI : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-
-	}
-
+	public float 
+	
 	// Update is called once per frame
 	void Update () {
-
+	
 	}
 }
