@@ -33,7 +33,7 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000012278069016}
+  - 224: {fileID: 224000012765805968}
   - 33: {fileID: 33000013084319804}
   - 23: {fileID: 23000010910573482}
   - 114: {fileID: 114000011996634250}
@@ -45,20 +45,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000012278069016
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014207380930}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 30, z: 20}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 4000012960724896}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!4 &4000012960724896
 Transform:
   m_ObjectHideFlags: 1
@@ -70,7 +56,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.6666667, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 4000012278069016}
+  m_Father: {fileID: 224000012765805968}
   m_RootOrder: 0
 --- !u!23 &23000010910573482
 MeshRenderer:
@@ -134,3 +120,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMat: {fileID: 2100000, guid: 814977e7e8c57024693705671f2edd7e, type: 2}
   highlightedMat: {fileID: 2100000, guid: e09b3f0ae16260243a5db0672d1bf39d, type: 2}
+  buildPanel: {fileID: 1000011399826976, guid: e4a27a027eac4ef4ab907cc847eadc41, type: 2}
+--- !u!224 &224000012765805968
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014207380930}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 30, z: 20}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4000012960724896}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -287.33777, y: 83.35361}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}

@@ -134,3 +134,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMat: {fileID: 2100000, guid: 814977e7e8c57024693705671f2edd7e, type: 2}
   highlightedMat: {fileID: 2100000, guid: e09b3f0ae16260243a5db0672d1bf39d, type: 2}
+  buildPanel: {fileID: 1000011399826976, guid: e4a27a027eac4ef4ab907cc847eadc41, type: 2}
