@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 90ff9a621cf6b3c448cc50aa9edf6c4b
+timeCreated: 1487773569
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - startMat: {instanceID: 0}
+  - highlightedMat: {instanceID: 0}
+  - buildPanel: {fileID: 1000014236266534, guid: e4a27a027eac4ef4ab907cc847eadc41,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
