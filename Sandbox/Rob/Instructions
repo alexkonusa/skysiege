@@ -1,0 +1,13 @@
+##Tags Needed
+
+Enemy
+Playable
+eventsSystem
+
+##Installing the files
+For the loading scene script, put it on the events system in the main menu scene. Code for the button needs to be
+
+var LoadScene = gameObject.GetComponent<LoadingScene> ().StartCoroutine ("Load");
+
+For the AI scripts, apply tags as required. Then drag the enemy script to the enemies, playerAI script to the players, and then AISpawn to the events
+system (this will have the eventsSystem tag)
