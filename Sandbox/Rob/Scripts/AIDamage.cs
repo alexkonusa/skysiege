@@ -6,19 +6,34 @@ public class AIDamage : MonoBehaviour {
 	public float countdown = 5f;
 	public float AttackCountdown = 5f;
 
+	float countdownDamage;
+	public float DamageCountdown = 5f;
+
 	public int range = 1;
 	public int rangemax = 5;
 
 	public bool Test2 = false;
 	public bool FoundSomething = false;
 
+	public int AttackDamage;
+	public int Health;
+
+
 	Transform Closest;
+
+	void Awake () {
+
+		countdownDamage = DamageCountdown;
+
+	}
 
 	void Update () {
 
-		countdown -= Time.deltaTime;
+		if (FoundSomething == false) {
+			countdown -= Time.deltaTime;
+		}
 
-		if (countdown <= 0) {
+		if (countdown <= 0 && FoundSomething == false) {
 			NearestObject();
 			countdown = AttackCountdown;
 		}
@@ -28,9 +43,32 @@ public class AIDamage : MonoBehaviour {
 			Debug.Log ("RangeIncrease");
 			Test2 = false;
 		}
+
+		if (FoundSomething == true) {
+
+			countdownDamage -= Time.deltaTime;
+
+			if (countdownDamage <= 0) {
+				Damage ();
+
+				countdownDamage = DamageCountdown;
+			}
+
+		}
 	}
 
 	void Damage () {
+
+		Debug.Log ("Damaging Something");
+
+
+
+		if (Closest != null) {
+			Closest.GetComponent<PlayerShipDamage> ().Health -= 10;
+
+		} else {
+			FoundSomething = false;
+		}
 
 	}
 
@@ -45,9 +83,7 @@ public class AIDamage : MonoBehaviour {
 
 			float dist = Vector3.Distance (transform.position, Playable.transform.position);
 			if (dist < range) {
-				//			ShortestDistance = dist;
 				Closest = Playable.transform;
-//				Debug.Log (Closest);
 				FoundSomething = true;
 			} else {
 				Test2 = true;
@@ -58,7 +94,7 @@ public class AIDamage : MonoBehaviour {
 
 	void RangeIncrease () {
 		
-		if (range < 5) {
+		if (range < rangemax) {
 			range = range + 1;
 			Debug.Log ("Increasing Range");
 		} else if (range == rangemax) {
@@ -67,28 +103,3 @@ public class AIDamage : MonoBehaviour {
 
 	}
 }
-
-
-
-/*
-  		countdown -= Time.deltaTime;
-  		
-		if (countdown <= 0) {
-
-		var CollidersInRange = Physics.OverlapSphere (transform.position, range);
-			if (range != rangemax) {
-		for (int i = 0; i < CollidersInRange.Length; i++) {				
-					if (gameObject.CompareTag ("HexTile") == false) {
-						if (gameObject.CompareTag ("Playable") == true) {
-							Debug.Log ("In Range");
-						} else {
-							Debug.Log ("Found Nothing");
-							Test2 = true;
-						}
-
-					}
-			}			
-		}
-			countdown = AttackCountdown;
-	}
-		*/
