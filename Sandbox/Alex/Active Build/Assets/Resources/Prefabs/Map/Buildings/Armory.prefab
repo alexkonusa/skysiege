@@ -24,6 +24,7 @@ GameObject:
   - 23: {fileID: 23000012210782990}
   - 114: {fileID: 114000010534520280}
   - 114: {fileID: 114000014199455140}
+  - 114: {fileID: 114000011929185140}
   m_Layer: 0
   m_Name: Armory
   m_TagString: Untagged
@@ -95,6 +96,19 @@ MonoBehaviour:
   description: Build an armory to build battle ships
   price: 200
   materials: 800
+--- !u!114 &114000011929185140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010857750914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e5a941cb6ffe42aca8139cbc9c7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armoryPanel: {fileID: 1000010831484256, guid: 8e9c0743a8a62994bb07c32117c365b6,
+    type: 2}
 --- !u!114 &114000014199455140
 MonoBehaviour:
   m_ObjectHideFlags: 1

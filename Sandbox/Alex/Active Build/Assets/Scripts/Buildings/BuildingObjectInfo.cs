@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class BuildingObjectInfo : MonoBehaviour 
 {
 
+	//Building Information
 	public Sprite icon;
 	public string description;
 	public int price = 50;

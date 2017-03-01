@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Building : MonoBehaviour 
 {
 
+	//store our buildings in this array
 	public GameObject[] buildings;
 
 	public Transform buildingPanel;
