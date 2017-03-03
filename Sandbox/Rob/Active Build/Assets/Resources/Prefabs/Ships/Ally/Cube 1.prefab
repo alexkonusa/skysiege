@@ -22,6 +22,8 @@ GameObject:
   - 33: {fileID: 33000010786687204}
   - 65: {fileID: 65000011980603900}
   - 23: {fileID: 23000012046298764}
+  - 114: {fileID: 114000012004007606}
+  - 114: {fileID: 114000013339844410}
   m_Layer: 0
   m_Name: Cube 1
   m_TagString: Untagged
@@ -90,3 +92,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114000012004007606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011584878900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2121054bd7b55d34696bcf8f7fbdb32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 513728a4b97c75b498e3652f6eacd195, type: 3}
+  description: 
+  price: 50
+  materials: 250
+--- !u!114 &114000013339844410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011584878900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60550a405ed134d4f86b29106977d231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invSlot: {fileID: 0}

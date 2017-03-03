@@ -56,14 +56,14 @@ public class Node : MonoBehaviour
 	void BuildPanelDraw()
 	{
 
-		if (uimanager.buildingPanelActive == false && builtBuilding == null) 
+		if (uimanager.panelActive == false && builtBuilding == null) 
 		{
 
-				GameObject BuildPanel = (GameObject)Instantiate (buildPanel, transform.position, transform.rotation) as GameObject;
+				GameObject BuildPanel = (GameObject)Instantiate (buildPanel, transform.position, transform.rotation);
 
 				BuildPanel.transform.SetParent (GameObject.FindGameObjectWithTag ("Canvas").transform, false);
 
-				uimanager.buildingPanelActive = true;
+				uimanager.panelActive = true;
 
 				BuildPanel.GetComponent<UI_Building> ().hexSelected = parentName;
 

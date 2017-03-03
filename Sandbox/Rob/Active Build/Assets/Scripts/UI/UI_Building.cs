@@ -37,7 +37,7 @@ public class UI_Building : MonoBehaviour
 	{
 
 		Destroy(GameObject.FindGameObjectWithTag("_buildPanel"));
-		uimanager.buildingPanelActive = false;
+		uimanager.panelActive = false;
 
 	}
 }

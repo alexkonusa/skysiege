@@ -788,10 +788,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f42b06a80c6a0634d8f70355036d52fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack: 0
-  AttackSpeed: 0
-  Damage: 0
-  Range: 1
-  AttackDamage: 0
-  Health: 0
+  Attack: 10
+  AttackSpeed: 5
+  Damage: 10
+  Range: 3
+  AttackDamage: 10
+  Health: 100
   EnemyInRange: 0

@@ -12,6 +12,7 @@ TagManager:
   - Map
   - Enemy
   - Playable
+  - Hub
   layers:
   - Default
   - TransparentFX

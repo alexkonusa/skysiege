@@ -24,7 +24,7 @@ public class Armory : MonoBehaviour
 		_armoryPanel.transform.SetParent 
 		(GameObject.FindGameObjectWithTag ("Canvas").transform, false);
 
-		uimanager.buildingPanelActive = true;
+		uimanager.panelActive = true;
 
 
 	}

@@ -24,7 +24,9 @@ public class UI_Armory : MonoBehaviour
 			Transform create_armorySlots = (Transform)Instantiate(armoryPanelSlot, 
 				armoryPanel.position, armoryPanel.rotation) as Transform;
 
-			create_armorySlots.transform.SetParent(armoryPanel, false);
+            create_armorySlots.GetComponent<UI_ArmortSlot>().thisShip = allyShips[i].gameObject;
+
+            create_armorySlots.transform.SetParent(armoryPanel, false);
 			
 		}
 	
@@ -34,7 +36,7 @@ public class UI_Armory : MonoBehaviour
 	{
 
 		Destroy(GameObject.FindGameObjectWithTag("_buildPanel"));
-		uimanager.buildingPanelActive = false;
+		uimanager.panelActive = false;
 
 	}
 }

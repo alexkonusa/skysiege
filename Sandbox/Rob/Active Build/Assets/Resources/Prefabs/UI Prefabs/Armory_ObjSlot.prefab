@@ -56,6 +56,7 @@ GameObject:
   - 222: {fileID: 222000011398374216}
   - 114: {fileID: 114000012597359678}
   - 114: {fileID: 114000013516050580}
+  - 114: {fileID: 114000013625710830}
   m_Layer: 5
   m_Name: Armory_ObjSlot
   m_TagString: Untagged
@@ -180,9 +181,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BUILD
-
-'
+  m_Text: Produce
 --- !u!114 &114000011702403928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -327,9 +326,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114000010299238688, guid: a73f9c361b473e2448c8f1f63adf8f39,
-          type: 2}
-        m_MethodName: BuildOnClick
+      - m_Target: {fileID: 114000013625710830}
+        m_MethodName: ShipConstruction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -341,6 +339,20 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114000013625710830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012236760894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d187a5a277bf8f499a3cd845f586c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisShip: {fileID: 0}
+  icon: {fileID: 114000011702403928}
+  description: {fileID: 114000012762474646}
 --- !u!114 &114000014182996726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -459,7 +471,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 696.5, y: -148}
+  m_AnchoredPosition: {x: 696.5, y: -770}
   m_SizeDelta: {x: 280, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000012564202664

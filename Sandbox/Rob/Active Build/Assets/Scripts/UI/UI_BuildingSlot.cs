@@ -68,7 +68,7 @@ public class UI_BuildingSlot : MonoBehaviour
 			node.builtBuilding = this_Building.gameObject;
 
 			Destroy (GameObject.FindGameObjectWithTag ("_buildPanel"));
-			uimanager.buildingPanelActive = false;
+			uimanager.panelActive = false;
 
 			StatsManager.shipStorage = (StatsManager.shipStorage + building.GetComponent<Hanger> ().shipStorageCountToADD);
 

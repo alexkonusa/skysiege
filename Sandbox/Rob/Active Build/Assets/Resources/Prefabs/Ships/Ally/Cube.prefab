@@ -22,6 +22,8 @@ GameObject:
   - 33: {fileID: 33000013124906216}
   - 65: {fileID: 65000012409664092}
   - 23: {fileID: 23000014160574222}
+  - 114: {fileID: 114000013989430072}
+  - 114: {fileID: 114000014069194480}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -90,3 +92,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114000013989430072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013076020522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2121054bd7b55d34696bcf8f7fbdb32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: b8bb06388e2556c43a979ecca124225a, type: 3}
+  description: 'Gold: 50 Materils: 250'
+  price: 50
+  materials: 250
+--- !u!114 &114000014069194480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013076020522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60550a405ed134d4f86b29106977d231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invSlot: {fileID: 0}

@@ -729,4 +729,4 @@ MonoBehaviour:
   Test2: 0
   FoundSomething: 0
   AttackDamage: 0
-  Health: 0
+  Health: 100
