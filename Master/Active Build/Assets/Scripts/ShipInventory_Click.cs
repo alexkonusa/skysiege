@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ShipInventory_Click : MonoBehaviour 
 {
 	//Public Variables
-	public int ID = 1;
+	public int ID;
 	public int avalible_Ships = 0;
 	public Text avalibleShip_Display;
 	public Button slotButton;
@@ -14,12 +14,29 @@ public class ShipInventory_Click : MonoBehaviour
 	//Private Variables
 	GameObject objectsParent;
 	BuildManager buildManager;
+
+    void Awake()
+    {
+        this.gameObject.name = "Ship_" + ID;
+        shipPrefab.GetComponent<ShipParameters>().invSlot = this.transform.gameObject;
+
+
+    }
+
 	// Use this for initialization
 	void Start () 
 	{
 
-		this.gameObject.name = "Ship_" + ID;
+		//this.gameObject.name = "Ship_" + ID;
 		buildManager = GameObject.Find ("GameManagers").GetComponent<BuildManager> ();
+
+        //if we start with 0 ships set the button to not interactable
+        if (avalible_Ships == 0)
+        {
+
+            slotButton.interactable = false;
+
+        }
 
 
 	}
@@ -27,6 +44,7 @@ public class ShipInventory_Click : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+
 		//Updating the text prefab with the amount of ships we have avalible. 
 		avalibleShip_Display.text = "" + avalible_Ships;
 
@@ -35,16 +53,20 @@ public class ShipInventory_Click : MonoBehaviour
 	
 	}
 
-	//When we click the slot if we have ships we can deploy them.
-	public void OnMouseClick()
+    //When we click the slot if we have ships we can deploy them.
+    public void OnMouseClick()
 	{
 
 		if (avalible_Ships > 0) 
 		{
 			
 			Debug.Log ("You have ships");
-			avalible_Ships -- ;
-			buildManager.currentObject = shipPrefab;
+            if (buildManager.currentObject == null)
+            {
+                avalible_Ships--;
+                buildManager.currentObject = shipPrefab;
+
+            }
 
 			if (avalible_Ships == 0) 
 				
@@ -54,9 +76,7 @@ public class ShipInventory_Click : MonoBehaviour
 				slotButton.interactable = false;
 
 			}
-
-
-		}
+        }
 	}
 
 	//If we have ships. Button becomes avalible.

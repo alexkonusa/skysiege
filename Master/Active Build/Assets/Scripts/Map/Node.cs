@@ -8,7 +8,7 @@ public class Node : MonoBehaviour
 	public Material highlightedMat;
 
 	public GameObject buildPanel;
-	public static GameObject builtBuilding;
+	public GameObject builtBuilding;
 
 	string parentName;
 
@@ -20,6 +20,8 @@ public class Node : MonoBehaviour
 		parentName = transform.parent.name;
 		rend = GetComponent<MeshRenderer>();
 		uimanager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
+
+		GetComponentInParent<_HexInfo> ().hexObjectName = this.gameObject.name;
 	}
 
 	void OnMouseDown ()
@@ -33,7 +35,7 @@ public class Node : MonoBehaviour
 	{
 
 		Material[] objMaterials = rend.GetComponent<MeshRenderer>().materials;
-		objMaterials[1] = highlightedMat;
+		objMaterials[0] = highlightedMat;
 		rend.GetComponent<MeshRenderer>().materials = objMaterials;
 
 	}
@@ -42,32 +44,32 @@ public class Node : MonoBehaviour
 	{
 
 		Material[] objMaterials = rend.GetComponent<MeshRenderer>().materials;
-		objMaterials[1] = startMat;
+		objMaterials[0] = startMat;
 		rend.GetComponent<MeshRenderer>().materials = objMaterials;
+
+		if (builtBuilding != null) {
+			Debug.Log (builtBuilding.name + parentName);
+		}
 
 	}
 
 	void BuildPanelDraw()
 	{
 
-		if (builtBuilding == null && uimanager.buildingPanelActive == false)
+		if (uimanager.panelActive == false && builtBuilding == null) 
 		{
-			GameObject BuildPanel = (GameObject)Instantiate(buildPanel, transform.position, transform.rotation) as GameObject;
 
-			BuildPanel.transform.SetParent( GameObject.FindGameObjectWithTag("Canvas").transform, false);
+				GameObject BuildPanel = (GameObject)Instantiate (buildPanel, transform.position, transform.rotation);
 
-			uimanager.buildingPanelActive = true;
+				BuildPanel.transform.SetParent (GameObject.FindGameObjectWithTag ("Canvas").transform, false);
 
-			BuildPanel.GetComponent<UI_Building>().hexSelected = parentName;
+				uimanager.panelActive = true;
+
+				BuildPanel.GetComponent<UI_Building> ().hexSelected = parentName;
 
 		}
 
-	}
-
-	void BuildFunction ()
-	{
-
-
+		Debug.Log ("Its not working");
 
 	}
 

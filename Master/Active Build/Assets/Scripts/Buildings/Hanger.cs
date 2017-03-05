@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
 
 public class Hanger : MonoBehaviour 
 {
 
-	public Sprite icon;
-	public string description;
+	public int shipStorageCountToADD = 5; // Number of ship storage to add
 
 	// Use this for initialization
 	void Start () 
 	{
 
+        StatsManager.AvalibleStorage(5);
 	
 	}
 	

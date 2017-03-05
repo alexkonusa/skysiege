@@ -8,6 +8,12 @@ TagManager:
   - Canvas
   - HexObj
   - _buildPanel
+  - _armoryPanel
+  - Map
+  - Enemy
+  - Playable
+  - Hub
+  - AllyShip
   layers:
   - Default
   - TransparentFX
