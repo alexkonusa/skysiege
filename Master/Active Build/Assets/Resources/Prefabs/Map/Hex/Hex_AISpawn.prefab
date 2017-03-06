@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010491128326}
   - 114: {fileID: 114000011689053018}
+  - 114: {fileID: 114000013812060562}
   m_Layer: 0
   m_Name: Hex_AISpawn
   m_TagString: Untagged
@@ -82,6 +83,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hexObjectName: 
+--- !u!114 &114000013812060562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011746609366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea47319a889fbd542823cbd35d374d99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAIShip: {fileID: 0}
 --- !u!212 &212000010279763860
 SpriteRenderer:
   m_ObjectHideFlags: 1

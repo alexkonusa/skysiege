@@ -61,10 +61,10 @@ public class ShipInventory_Click : MonoBehaviour
 		{
 			
 			Debug.Log ("You have ships");
-            if (buildManager.currentObject == null)
+            if (buildManager.allyShip == null)
             {
                 avalible_Ships--;
-                buildManager.currentObject = shipPrefab;
+                buildManager.allyShip = shipPrefab;
 
             }
 

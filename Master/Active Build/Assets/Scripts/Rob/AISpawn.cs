@@ -53,12 +53,12 @@ public class AISpawn : MonoBehaviour {
                         {
                             //If nothing is in the spot, spawn an AI
 
-                            int spawnpoint = Random.Range(0, (Griddy.hexLayerThree.Count));
+                            //int spawnpoint = Random.Range(0, (Griddy.hexLayerThree.Count));
          
 
-							GameObject enemyShip = (GameObject)Instantiate (Ship_1, Griddy.hexLayerThree [spawnpoint].transform.position, Quaternion.identity);
-                            enemyShip.name = Ship_1.name;
-                            SpawnedEnemies++;
+							//GameObject enemyShip = (GameObject)Instantiate (Ship_1, Griddy.hexLayerThree [spawnpoint].transform.position, Quaternion.identity);
+                            //enemyShip.name = Ship_1.name;
+                           // SpawnedEnemies++;
 						}
 					}
 				}

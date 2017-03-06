@@ -16,16 +16,23 @@ public class AI_Ship : MonoBehaviour
     GameObject hub;
     LineRenderer lineRenderer;
 
-    void Start()
+    public enum AttackType
+    {
+        Laser,
+        Auto
+    };
+
+    public AttackType attackType;
+
+void Start()
     {
 
         StartCoroutine(CheckForShipsTimer(10));
 
         hub = GameObject.FindGameObjectWithTag("Hub");
-        transform.LookAt(hub.transform); //Looking at the hub
+        transform.LookAt(hub.transform); //Look at the hub
 
         lineRenderer = GetComponent<LineRenderer>();
-
     }
 
     void GetClosestEnemyShips()
@@ -93,22 +100,25 @@ public class AI_Ship : MonoBehaviour
     {
         if (closestAlly == null)
         {
-            //Line Renderer stuff
-            lineRenderer.enabled = true;
-            Vector3 position = transform.position;
+            transform.LookAt(hub.transform); //Look at the hub
 
-            Vector3 startPointOffSet = new Vector3(0f, 0.5f, 0f); //End position offset
-            Vector3 endPointOffSet = new Vector3(0f, 1f, 0f); //End position offset
+            switch (attackType)
+            {
 
-            lineRenderer.SetPosition(0, transform.position + startPointOffSet);
-            lineRenderer.SetPosition(1, hub.transform.position + endPointOffSet);
+                case AttackType.Laser:
+                    attackLaser();
+                    break;
 
-            Debug.Log("FUCK YOU HUB");
-            //Damage the Hub
-            Hub.hubHealth = (Hub.hubHealth - hubDamage);
-            Debug.Log("Hub Health: " + Hub.hubHealth);
+                case AttackType.Auto:
+                    laserTest();
+                    break;
 
-            StartCoroutine(LaserTimer(laserTimer));
+            }
+
+                Debug.Log("FUCK YOU HUB");
+                //Damage the Hub
+                Hub.hubHealth = (Hub.hubHealth - hubDamage);
+                Debug.Log("Hub Health: " + Hub.hubHealth);
         }
 
     }
@@ -119,6 +129,40 @@ public class AI_Ship : MonoBehaviour
         //We will use this to give us an idea of area covered
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, 3);
+
+    }
+
+    void attackLaser()
+    {
+        Debug.Log("Case 1");
+        //Line Renderer stuff
+        lineRenderer.enabled = true;
+        Vector3 position = transform.position;
+
+        Vector3 startPointOffSet = new Vector3(0f, 0.5f, 0f); //End position offset
+        Vector3 endPointOffSet = new Vector3(0f, 1f, 0f); //End position offset
+
+        lineRenderer.SetPosition(0, position + startPointOffSet);
+        lineRenderer.SetPosition(1, hub.transform.position + endPointOffSet);
+
+        StartCoroutine(LaserTimer(laserTimer));
+
+    }
+
+    void laserTest()
+    {
+
+        Debug.Log("Case 2");
+        //Line Renderer stuff
+        lineRenderer.enabled = true;
+        Vector3 position = transform.position;
+        Vector3 startPointOffSet = new Vector3(0f, 0.5f, 0f); //End position offset
+        Vector3 endPointOffSet = new Vector3(0f, 1f, 0f); //End position offset
+
+        lineRenderer.SetPosition(0, position + startPointOffSet);
+        lineRenderer.SetPosition(1, hub.transform.position + endPointOffSet);
+
+        StartCoroutine(LaserTimer(laserTimer));
 
     }
 

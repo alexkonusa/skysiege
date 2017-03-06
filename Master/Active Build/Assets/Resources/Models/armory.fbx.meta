@@ -1,20 +1,16 @@
 fileFormatVersion: 2
-guid: 91cb96bbda3a0ca4c8931e257ccaa821
-timeCreated: 1488637522
+guid: 7e0ba9fcc75147c44bd57ec72a875c0d
+timeCreated: 1488735410
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cinema4D_Editor
-    100004: Cylinder_2
     400000: //RootNode
-    400002: Cinema4D_Editor
-    400004: Cylinder_2
-    2300000: Cylinder_2
-    3300000: Cylinder_2
-    4300000: Cylinder_2
-    6400000: Cylinder_2
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: armoary
+    6400000: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -41,7 +37,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 0.23
-    meshCompression: 3
+    meshCompression: 0
     addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0

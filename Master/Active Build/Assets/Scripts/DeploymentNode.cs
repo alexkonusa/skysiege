@@ -21,11 +21,11 @@ public class DeploymentNode : MonoBehaviour
 
         if (shipDeployed == null)
         {
-            if (buildManager.currentObject)
+            if (buildManager.allyShip)
             {
-                GameObject _shipDeployed = (GameObject)Instantiate(buildManager.currentObject, transform.position, transform.rotation);
+                GameObject _shipDeployed = (GameObject)Instantiate(buildManager.allyShip, transform.position, transform.rotation);
 
-                buildManager.currentObject = null;
+                buildManager.allyShip = null;
 
                 _shipDeployed.transform.SetParent(this.gameObject.transform, false);
                 _shipDeployed.transform.localPosition = Vector3.zero;

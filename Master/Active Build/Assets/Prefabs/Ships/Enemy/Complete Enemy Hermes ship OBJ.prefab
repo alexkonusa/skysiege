@@ -729,6 +729,7 @@ MonoBehaviour:
   enemyShipTag: AllyShip
   shipFound: 0
   attackHub: 1
+  attackType: 0
 --- !u!114 &114000013448271488
 MonoBehaviour:
   m_ObjectHideFlags: 1
