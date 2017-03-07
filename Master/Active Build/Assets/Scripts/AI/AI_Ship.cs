@@ -5,7 +5,10 @@ public class AI_Ship : MonoBehaviour
 {
 
     public GameObject closestAlly = null;
-
+    public float health; 
+    public float countDown = 0f;
+    public float fireRate = 1f;
+    public float enemyDamage = 1f;
     public float hubDamage = 0.2f; //Dmg we deal to the hub
     public float laserTimer = 1.0f;
 
@@ -19,7 +22,6 @@ public class AI_Ship : MonoBehaviour
     public enum AttackType
     {
         Laser,
-        Auto
     };
 
     public AttackType attackType;
@@ -33,6 +35,21 @@ void Start()
         transform.LookAt(hub.transform); //Look at the hub
 
         lineRenderer = GetComponent<LineRenderer>();
+    }
+
+    void Update()
+    {
+        AttackTheEnemy();
+
+        if (shipFound == true && closestAlly == null)
+        {
+            closestAlly = null;
+            shipFound = false;
+            attackHub = true;
+
+
+        }
+
     }
 
     void GetClosestEnemyShips()
@@ -54,6 +71,7 @@ void Start()
 
                     Debug.Log("FoundShip");
                     shipFound = true;
+                    attackHub = false; //If we found the ship don't attack the hub any more
 
                 }
             }
@@ -70,7 +88,7 @@ void Start()
             //If we don't have a closest enemy findone.
             if (closestAlly == null)
             {
-                //Getting the closest ship
+                //Get the closest ship
                 float distance = Mathf.Infinity;
                 Vector3 position = transform.position;
 
@@ -109,10 +127,6 @@ void Start()
                     attackLaser();
                     break;
 
-                case AttackType.Auto:
-                    laserTest();
-                    break;
-
             }
 
                 Debug.Log("FUCK YOU HUB");
@@ -132,6 +146,42 @@ void Start()
 
     }
 
+    void AttackTheEnemy()
+    {
+
+        if (closestAlly != null)
+        {
+
+            GameObject _closestAlly = closestAlly.gameObject;
+            float allyHealth = _closestAlly.GetComponent<AI_Ally>().health;
+
+            if (allyHealth - 1 >= 0)
+            {
+                    if (countDown <= 0)
+                    {
+
+                        //attack the ship
+                        _closestAlly.GetComponent<AI_Ally>().health = (_closestAlly.GetComponent<AI_Ally>().health - enemyDamage);
+                        Debug.Log("I'm Attacking ally");
+                        countDown = 1f / fireRate;
+                    }
+
+                countDown -= Time.deltaTime;
+            }
+
+                if (allyHealth <= 0)
+            {
+                closestAlly = null;
+                if (closestAlly == null)
+                {
+                    attackHub = true;
+                    shipFound = false;
+                }
+            }
+        }
+
+    }
+
     void attackLaser()
     {
         Debug.Log("Case 1");
@@ -139,23 +189,6 @@ void Start()
         lineRenderer.enabled = true;
         Vector3 position = transform.position;
 
-        Vector3 startPointOffSet = new Vector3(0f, 0.5f, 0f); //End position offset
-        Vector3 endPointOffSet = new Vector3(0f, 1f, 0f); //End position offset
-
-        lineRenderer.SetPosition(0, position + startPointOffSet);
-        lineRenderer.SetPosition(1, hub.transform.position + endPointOffSet);
-
-        StartCoroutine(LaserTimer(laserTimer));
-
-    }
-
-    void laserTest()
-    {
-
-        Debug.Log("Case 2");
-        //Line Renderer stuff
-        lineRenderer.enabled = true;
-        Vector3 position = transform.position;
         Vector3 startPointOffSet = new Vector3(0f, 0.5f, 0f); //End position offset
         Vector3 endPointOffSet = new Vector3(0f, 1f, 0f); //End position offset
 
