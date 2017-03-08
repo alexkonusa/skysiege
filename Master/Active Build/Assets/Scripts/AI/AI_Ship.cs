@@ -5,7 +5,7 @@ public class AI_Ship : MonoBehaviour
 {
 
     public GameObject closestAlly = null;
-    public float health; 
+    public float health = 100f; 
     public float countDown = 0f;
     public float fireRate = 1f;
     public float enemyDamage = 1f;
@@ -47,6 +47,14 @@ void Start()
             shipFound = false;
             attackHub = true;
 
+
+        }
+
+        //Kill the ship
+        if (health <= 0)
+        {
+
+            Destroy(gameObject);
 
         }
 

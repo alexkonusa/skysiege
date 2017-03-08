@@ -14,6 +14,7 @@ ModelImporter:
     2300000: Friendlyship01
     3300000: Friendlyship01
     4300000: Friendlyship01
+    6400000: Friendlyship01
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -39,9 +40,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.19
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
