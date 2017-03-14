@@ -195,6 +195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allyShip: {fileID: 0}
+  normalMat: {fileID: 2100000, guid: cb0a174dfe50ac4469d5b144626dc9c8, type: 2}
+  avalibleHexs: []
 --- !u!4 &358152949
 Transform:
   m_ObjectHideFlags: 0
@@ -235,14 +237,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaveData:
   - roundName: 
-    numberOfShips: 25
+    numberOfShips: 0
     ship1Precentage: 90
     ship2Precentage: 10
     ship3Precentage: 0
     ship4Precentage: 0
     ship5Precentage: 0
   - roundName: 
-    numberOfShips: 25
+    numberOfShips: 0
     ship1Precentage: 11
     ship2Precentage: 12
     ship3Precentage: 44
@@ -1057,6 +1059,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012631180618, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
+        type: 2}
+      propertyPath: coloredHex
+      value: 
+      objectReference: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
+    - target: {fileID: 114000010965103152, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
+        type: 2}
+      propertyPath: coloredHex
+      value: 
+      objectReference: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ffda006a5e3c214ea8e2ad7354b2380, type: 2}
   m_IsPrefabParent: 0
@@ -1197,9 +1209,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 4
   avalible_Ships: 0
+  shipLevel: 0
   avalibleShip_Display: {fileID: 1492407583}
   slotButton: {fileID: 1163723772}
   shipPrefab: {fileID: 1000010063454804, guid: 4a4dda0d9e124e54ea392ba4fba55525, type: 2}
+  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!1 &1183315561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,11 +1250,11 @@ MonoBehaviour:
   decorItems: []
   hexPrefabToInst: {fileID: 1000014207380930, guid: 50f6c8e0d938c8c4a81deec38bbf60be,
     type: 2}
-  hexAiDeploymentSprite: {fileID: 1000011746609366, guid: ba5588f707b9b2645aed918f9a09c584,
+  hexAiDeploymentSprite: {fileID: 1000010384007206, guid: 9e22348da2ba37b4aad5bc9f948dd653,
     type: 2}
-  hexShipDeploymentSprite: {fileID: 1000013629859102, guid: b48c2863e6115f34aa5f09c9952828f4,
+  hexShipDeploymentSprite: {fileID: 1000013798032606, guid: 13af1af7463c41141854c5c284ed06a1,
     type: 2}
-  hexGridPrefab: {fileID: 1000013149039932, guid: b065c97f7f46c0e4fb27bd3f55a1f0c2,
+  hexGridPrefab: {fileID: 1000012190196816, guid: a7d3ce2bf12d2434a97ac47b220d13a5,
     type: 2}
   hexParent: {fileID: 1183315563}
   hexSprite: {fileID: 21300000, guid: d33a621a0c16fdc4f99e842e23732f71, type: 3}
@@ -1365,9 +1379,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 3
   avalible_Ships: 0
+  shipLevel: 0
   avalibleShip_Display: {fileID: 728233496}
   slotButton: {fileID: 1371607773}
   shipPrefab: {fileID: 1000011169976810, guid: b52faf432f062f04b97d2630d298bb14, type: 2}
+  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!1 &1373008487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,9 +1855,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 5
   avalible_Ships: 0
+  shipLevel: 0
   avalibleShip_Display: {fileID: 1522069909}
   slotButton: {fileID: 1879407022}
   shipPrefab: {fileID: 1000011733312184, guid: 2e234354d5998f54cb1615404b9fa6ff, type: 2}
+  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!1 &1901978204
 GameObject:
   m_ObjectHideFlags: 0

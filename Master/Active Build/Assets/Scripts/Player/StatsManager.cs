@@ -11,7 +11,6 @@ public class StatsManager : MonoBehaviour
 
 	//Extras
 	public static int shipStorage;
-    static int maxShipStorage;
     static public int currentBuiltShips;
 
 	public Text goldDisplay;
@@ -37,6 +36,5 @@ public class StatsManager : MonoBehaviour
     public static void AvalibleStorage(int avalibleStorage)
     {
         shipStorage = (shipStorage + avalibleStorage);
-        maxShipStorage = shipStorage;
     }
 }

@@ -7,9 +7,11 @@ public class ShipInventory_Click : MonoBehaviour
 	//Public Variables
 	public int ID;
 	public int avalible_Ships = 0;
+    public int shipLevel;
 	public Text avalibleShip_Display;
 	public Button slotButton;
 	public GameObject shipPrefab;
+    public Material coloredHex;
 
 	//Private Variables
 	GameObject objectsParent;
@@ -66,6 +68,11 @@ public class ShipInventory_Click : MonoBehaviour
                 avalible_Ships--;
                 buildManager.allyShip = shipPrefab;
 
+                //Now change the color of our avalible hexs
+                buildManager.GetOurAvalibleHexs();
+                buildManager.ChangeOurHexMaterial(coloredHex);
+
+
             }
 
 			if (avalible_Ships == 0) 
@@ -79,8 +86,15 @@ public class ShipInventory_Click : MonoBehaviour
         }
 	}
 
-	//If we have ships. Button becomes avalible.
-	public void UpdateShipAvalibleNumber (int shipCounterValue)
+    void OnMouseEnter()
+    {
+
+
+
+    }
+
+    //If we have ships. Button becomes avalible.
+    public void UpdateShipAvalibleNumber (int shipCounterValue)
 	{
 
 		avalible_Ships += shipCounterValue;

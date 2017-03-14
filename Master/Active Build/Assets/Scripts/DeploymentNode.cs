@@ -5,6 +5,7 @@ public class DeploymentNode : MonoBehaviour
 {
 
     public GameObject shipDeployed;
+    public Material normalHexMat1;
 
     BuildManager buildManager;
 
@@ -15,8 +16,8 @@ public class DeploymentNode : MonoBehaviour
         buildManager = GameObject.Find("GameManagers").GetComponent<BuildManager>();
 
     }
-	
-	void OnMouseDown ()
+
+    void OnMouseDown ()
     {
 
         if (shipDeployed == null)
@@ -24,6 +25,13 @@ public class DeploymentNode : MonoBehaviour
             if (buildManager.allyShip)
             {
                 GameObject _shipDeployed = (GameObject)Instantiate(buildManager.allyShip, transform.position, transform.rotation);
+
+                //Now change the color of our avalible hexs back to normal
+                buildManager.ChangeOurHexMaterial(normalHexMat1);
+                buildManager.avalibleHexs.Clear();
+
+
+                shipDeployed = _shipDeployed;
 
                 buildManager.allyShip = null;
 
