@@ -27,9 +27,9 @@ public class StatsManager : MonoBehaviour
 
 	void DisplayStats()
 	{
-		goldDisplay.text = "Gold: " + gold;
-		materialDisplay.text = "Materials: " + materials;
-		shipStoraDisplay.text = "Ship Storage: " + shipStorage;
+		goldDisplay.text = "" + gold;
+		materialDisplay.text = "" + materials;
+		shipStoraDisplay.text = "" + shipStorage;
 
 	}
 
