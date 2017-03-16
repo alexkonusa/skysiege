@@ -5,6 +5,7 @@ public class UIManager : MonoBehaviour
 {
 
 	public bool panelActive = false;
+    public static bool shipDescriptionAvtice = false;
 
 	// Use this for initialization
 	void Start () {

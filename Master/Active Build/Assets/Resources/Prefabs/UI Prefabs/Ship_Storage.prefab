@@ -40,6 +40,7 @@ GameObject:
   - 114: {fileID: 114000011678774418}
   - 114: {fileID: 114000010406055546}
   - 114: {fileID: 114000010152948696}
+  - 114: {fileID: 114000011157252320}
   m_Layer: 5
   m_Name: Slot (2)
   m_TagString: Untagged
@@ -113,6 +114,7 @@ GameObject:
   - 114: {fileID: 114000013542482926}
   - 114: {fileID: 114000011404269044}
   - 114: {fileID: 114000012135022776}
+  - 114: {fileID: 114000010875027168}
   m_Layer: 5
   m_Name: Slot (4)
   m_TagString: Untagged
@@ -221,6 +223,7 @@ GameObject:
   - 114: {fileID: 114000010861084672}
   - 114: {fileID: 114000011203036542}
   - 114: {fileID: 114000010148313426}
+  - 114: {fileID: 114000013643889050}
   m_Layer: 5
   m_Name: Slot (3)
   m_TagString: Untagged
@@ -397,7 +400,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114000011678774418}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114000011157252320}
+        m_MethodName: OnMouseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114000010442313906
@@ -557,6 +571,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114000010875027168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011327028002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56113897c5fa4b41b39b795e09f1313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 5
+  avalible_Ships: 0
+  shipLevel: 0
+  avalibleShip_Display: {fileID: 114000012484595154}
+  slotButton: {fileID: 114000011404269044}
+  shipPrefab: {fileID: 1000011733312184, guid: 2e234354d5998f54cb1615404b9fa6ff, type: 2}
+  shipDescriptionPanel: {fileID: 0}
+  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!114 &114000010965103152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -569,10 +602,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 2
-  avalible_Ships: 2
+  avalible_Ships: 0
+  shipLevel: 0
   avalibleShip_Display: {fileID: 114000013048528292}
   slotButton: {fileID: 114000011788543058}
-  shipPrefab: {fileID: 1000010858061802, guid: 70c1ec61caedd6f45b09f7fdecc93e9a, type: 2}
+  shipPrefab: {fileID: 1000013494326152, guid: c338fb0c8687580429329ccc18f36945, type: 2}
+  shipDescriptionPanel: {fileID: 0}
+  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!114 &114000010978363722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -600,6 +636,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114000011157252320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010347876980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56113897c5fa4b41b39b795e09f1313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 3
+  avalible_Ships: 0
+  shipLevel: 0
+  avalibleShip_Display: {fileID: 114000011697995550}
+  slotButton: {fileID: 114000010406055546}
+  shipPrefab: {fileID: 1000011169976810, guid: b52faf432f062f04b97d2630d298bb14, type: 2}
+  shipDescriptionPanel: {fileID: 0}
+  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!114 &114000011203036542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -638,7 +693,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114000010861084672}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114000013643889050}
+        m_MethodName: OnMouseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114000011282223988
@@ -653,7 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -706,7 +772,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114000013542482926}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114000010875027168}
+        m_MethodName: OnMouseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114000011678774418
@@ -958,10 +1035,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 1
-  avalible_Ships: 1
+  avalible_Ships: 0
+  shipLevel: 0
   avalibleShip_Display: {fileID: 114000010558115836}
   slotButton: {fileID: 114000010442313906}
-  shipPrefab: {fileID: 1000013577092700, guid: 2662ec0dd7198f245a05f11c70ca92c4, type: 2}
+  shipPrefab: {fileID: 1000010548369022, guid: 68b16edcaeb9a91429d66778b168a17e, type: 2}
+  shipDescriptionPanel: {fileID: 1000013414270702, guid: 2e630218499c3a347993070863cf27a5,
+    type: 2}
+  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!114 &114000012964530174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1076,6 +1157,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114000013643889050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013313145662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56113897c5fa4b41b39b795e09f1313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 4
+  avalible_Ships: 0
+  shipLevel: 0
+  avalibleShip_Display: {fileID: 114000013814499232}
+  slotButton: {fileID: 114000011203036542}
+  shipPrefab: {fileID: 1000010063454804, guid: 4a4dda0d9e124e54ea392ba4fba55525, type: 2}
+  shipDescriptionPanel: {fileID: 0}
+  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!114 &114000013814499232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1261,7 +1361,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 141.30002, y: 35.300034}
+  m_AnchoredPosition: {x: 136.69998, y: 35.300064}
   m_SizeDelta: {x: 273.4, y: 70.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000010475053004

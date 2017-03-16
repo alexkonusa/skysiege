@@ -90,6 +90,78 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4332652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000013000084428, guid: 2e630218499c3a347993070863cf27a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 4332653}
+  - 222: {fileID: 4332655}
+  - 114: {fileID: 4332654}
+  m_Layer: 5
+  m_Name: ShipDescPanel
+  m_TagString: ShipDescriptionPanel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4332653
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224000013700578972, guid: 2e630218499c3a347993070863cf27a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 4332652}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1397199922}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -208.89996}
+  m_SizeDelta: {x: -804, y: -559}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4332654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000010136775804, guid: 2e630218499c3a347993070863cf27a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 4332652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &4332655
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222000011536122750, guid: 2e630218499c3a347993070863cf27a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 4332652}
 --- !u!1 &15923510
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,19 +453,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaveData:
   - roundName: 
-    numberOfShips: 0
-    ship1Precentage: 90
-    ship2Precentage: 10
+    numberOfShips: 3
+    ship1Precentage: 100
+    ship2Precentage: 0
     ship3Precentage: 0
     ship4Precentage: 0
     ship5Precentage: 0
   - roundName: 
-    numberOfShips: 0
-    ship1Precentage: 11
-    ship2Precentage: 12
-    ship3Precentage: 44
-    ship4Precentage: 13
-    ship5Precentage: 20
+    numberOfShips: 45
+    ship1Precentage: 100
+    ship2Precentage: 0
+    ship3Precentage: 0
+    ship4Precentage: 0
+    ship5Precentage: 0
   index: 1
   numShip1ToSpawn: 0
   numShip2ToSpawn: 0
@@ -611,12 +683,6 @@ RectTransform:
   m_AnchoredPosition: {x: 450, y: -266.66666}
   m_SizeDelta: {x: 115, y: 106.666664}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &728233496 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000011697995550, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-    type: 2}
-  m_PrefabInternal: {fileID: 1088704408}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &861951602
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,21 +902,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1397199922}
     m_Modifications:
-    - target: {fileID: 114000010406055546, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011203036542, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011404269044, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224000010301114156, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -894,12 +945,12 @@ Prefab:
     - target: {fileID: 224000010301114156, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 141.30002
+      value: 136.69998
       objectReference: {fileID: 0}
     - target: {fileID: 224000010301114156, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 35.300034
+      value: 35.300064
       objectReference: {fileID: 0}
     - target: {fileID: 224000010301114156, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
         type: 2}
@@ -941,6 +992,30 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010965103152, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
+        type: 2}
+      propertyPath: shipDescriptionPanel
+      value: 
+      objectReference: {fileID: 1000013414270702, guid: 2e630218499c3a347993070863cf27a5,
+        type: 2}
+    - target: {fileID: 114000011157252320, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
+        type: 2}
+      propertyPath: shipDescriptionPanel
+      value: 
+      objectReference: {fileID: 1000013414270702, guid: 2e630218499c3a347993070863cf27a5,
+        type: 2}
+    - target: {fileID: 114000013643889050, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
+        type: 2}
+      propertyPath: shipDescriptionPanel
+      value: 
+      objectReference: {fileID: 1000013414270702, guid: 2e630218499c3a347993070863cf27a5,
+        type: 2}
+    - target: {fileID: 114000010875027168, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
+        type: 2}
+      propertyPath: shipDescriptionPanel
+      value: 
+      objectReference: {fileID: 1000013414270702, guid: 2e630218499c3a347993070863cf27a5,
+        type: 2}
     - target: {fileID: 224000012824961450, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
         type: 2}
       propertyPath: m_AnchorMin.y
@@ -1091,133 +1166,11 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012631180618, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
+    - target: {fileID: 114000010442313906, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
         type: 2}
-      propertyPath: shipPrefab
-      value: 
-      objectReference: {fileID: 1000010548369022, guid: 68b16edcaeb9a91429d66778b168a17e,
-        type: 2}
-    - target: {fileID: 114000010965103152, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: shipPrefab
-      value: 
-      objectReference: {fileID: 1000013494326152, guid: c338fb0c8687580429329ccc18f36945,
-        type: 2}
-    - target: {fileID: 114000010965103152, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: thisID
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012631180618, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: thisID
+      propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012631180618, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: ID
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010965103152, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: ID
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012631180618, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: avalible_Ships
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010965103152, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: avalible_Ships
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010406055546, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010406055546, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010406055546, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1371607776}
-    - target: {fileID: 114000010406055546, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMouseClick
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010406055546, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011203036542, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011203036542, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011203036542, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1163723775}
-    - target: {fileID: 114000011203036542, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMouseClick
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011203036542, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011404269044, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011404269044, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011404269044, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1879407025}
-    - target: {fileID: 114000011404269044, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMouseClick
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000011404269044, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012631180618, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: coloredHex
-      value: 
-      objectReference: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
-    - target: {fileID: 114000010965103152, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-        type: 2}
-      propertyPath: coloredHex
-      value: 
-      objectReference: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ffda006a5e3c214ea8e2ad7354b2380, type: 2}
   m_IsPrefabParent: 0
@@ -1335,35 +1288,6 @@ Transform:
   - {fileID: 640954438}
   m_Father: {fileID: 861951603}
   m_RootOrder: 1
---- !u!1 &1163723769 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013313145662, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-    type: 2}
-  m_PrefabInternal: {fileID: 1088704408}
---- !u!114 &1163723772 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000011203036542, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-    type: 2}
-  m_PrefabInternal: {fileID: 1088704408}
-  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!114 &1163723775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1163723769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b56113897c5fa4b41b39b795e09f1313, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 4
-  avalible_Ships: 0
-  shipLevel: 0
-  avalibleShip_Display: {fileID: 1492407583}
-  slotButton: {fileID: 1163723772}
-  shipPrefab: {fileID: 1000010063454804, guid: 4a4dda0d9e124e54ea392ba4fba55525, type: 2}
-  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!1 &1183315561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,35 +1429,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1334256899}
---- !u!1 &1371607770 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000010347876980, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-    type: 2}
-  m_PrefabInternal: {fileID: 1088704408}
---- !u!114 &1371607773 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000010406055546, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-    type: 2}
-  m_PrefabInternal: {fileID: 1088704408}
-  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!114 &1371607776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1371607770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b56113897c5fa4b41b39b795e09f1313, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 3
-  avalible_Ships: 0
-  shipLevel: 0
-  avalibleShip_Display: {fileID: 728233496}
-  slotButton: {fileID: 1371607773}
-  shipPrefab: {fileID: 1000011169976810, guid: b52faf432f062f04b97d2630d298bb14, type: 2}
-  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!1 &1373008487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1615,7 @@ RectTransform:
   - {fileID: 1734515795}
   - {fileID: 1373008488}
   - {fileID: 1924088623}
+  - {fileID: 4332653}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
@@ -1829,18 +1725,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab2bc12b6adb1804b825e67873fe84b7, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1492407583 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000013814499232, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-    type: 2}
-  m_PrefabInternal: {fileID: 1088704408}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!114 &1522069909 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000012484595154, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-    type: 2}
-  m_PrefabInternal: {fileID: 1088704408}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1604441503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,35 +2236,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!1 &1879407019 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000011327028002, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-    type: 2}
-  m_PrefabInternal: {fileID: 1088704408}
---- !u!114 &1879407022 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000011404269044, guid: 6ffda006a5e3c214ea8e2ad7354b2380,
-    type: 2}
-  m_PrefabInternal: {fileID: 1088704408}
-  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!114 &1879407025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1879407019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b56113897c5fa4b41b39b795e09f1313, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 5
-  avalible_Ships: 0
-  shipLevel: 0
-  avalibleShip_Display: {fileID: 1522069909}
-  slotButton: {fileID: 1879407022}
-  shipPrefab: {fileID: 1000011733312184, guid: 2e234354d5998f54cb1615404b9fa6ff, type: 2}
-  coloredHex: {fileID: 2100000, guid: d010bb3ba68883544904453da59afa04, type: 2}
 --- !u!1 &1901978204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,10 +2416,10 @@ RectTransform:
   - {fileID: 1782779284}
   m_Father: {fileID: 1397199922}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 331, y: -227}
-  m_SizeDelta: {x: -663, y: -454}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -182.7, y: 25.6}
+  m_SizeDelta: {x: 364.5, y: 51.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1924088624
 MonoBehaviour:

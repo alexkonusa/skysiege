@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ShipInventory_Click : MonoBehaviour 
+public class ShipInventory_Click : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-	//Public Variables
+    //Public Variables
 	public int ID;
 	public int avalible_Ships = 0;
     public int shipLevel;
 	public Text avalibleShip_Display;
 	public Button slotButton;
 	public GameObject shipPrefab;
+    public GameObject shipDescriptionPanel;
     public Material coloredHex;
 
 	//Private Variables
@@ -57,9 +59,9 @@ public class ShipInventory_Click : MonoBehaviour
 
     //When we click the slot if we have ships we can deploy them.
     public void OnMouseClick()
-	{
+    {
 
-		if (avalible_Ships > 0) 
+        if (avalible_Ships > 0) 
 		{
 			
 			Debug.Log ("You have ships");
@@ -71,6 +73,7 @@ public class ShipInventory_Click : MonoBehaviour
                 //Now change the color of our avalible hexs
                 buildManager.GetOurAvalibleHexs();
                 buildManager.ChangeOurHexMaterial(coloredHex);
+
 
 
             }
@@ -86,10 +89,38 @@ public class ShipInventory_Click : MonoBehaviour
         }
 	}
 
-    void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+
+            ShipDesc();
+
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
     {
 
 
+        StartCoroutine(DestroyUIDesc(1F));
+
+
+    }
+
+    void ShipDesc()
+    {
+
+        if (UIManager.shipDescriptionAvtice == false)
+        {
+            GameObject panelOrigin = GameObject.FindGameObjectWithTag("ShipDescriptionPanel");
+
+            //Instantiate 
+            GameObject BuildingPanel = (GameObject)Instantiate(shipDescriptionPanel, panelOrigin.transform.position, panelOrigin.transform.rotation);
+            BuildingPanel.transform.SetParent(panelOrigin.transform, false);
+            BuildingPanel.transform.localPosition = Vector3.zero;
+            ShipDescription.ourShipInfo = shipPrefab;
+
+            UIManager.shipDescriptionAvtice = true;
+
+        }
 
     }
 
@@ -107,4 +138,13 @@ public class ShipInventory_Click : MonoBehaviour
 		}
 
 	}
+
+    IEnumerator DestroyUIDesc(float timer)
+    {
+
+        yield return new WaitForSeconds(timer);
+        Destroy(GameObject.Find("shipDesc(Clone)"));
+        UIManager.shipDescriptionAvtice = false;
+
+    }
 }

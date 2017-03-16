@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class AI_Ship : MonoBehaviour
 {
 
     public GameObject closestAlly = null;
-    public float health = 100f; 
+    public float health = 100f;
+    public float maxHealth;
     public float countDown = 0f;
     public float fireRate = 1f;
     public float enemyDamage = 1f;
@@ -26,7 +28,7 @@ public class AI_Ship : MonoBehaviour
 
     public AttackType attackType;
 
-void Start()
+    void Start()
     {
 
         StartCoroutine(CheckForShipsTimer(10));
@@ -35,6 +37,9 @@ void Start()
         transform.LookAt(hub.transform); //Look at the hub
 
         lineRenderer = GetComponent<LineRenderer>();
+
+        maxHealth = health;
+
     }
 
     void Update()
@@ -162,6 +167,7 @@ void Start()
 
             GameObject _closestAlly = closestAlly.gameObject;
             float allyHealth = _closestAlly.GetComponent<AI_Ally>().health;
+            float enemyMaxHealth = _closestAlly.GetComponent<AI_Ally>().maxHealth;
 
             if (allyHealth - 1 >= 0)
             {
@@ -172,7 +178,15 @@ void Start()
                         _closestAlly.GetComponent<AI_Ally>().health = (_closestAlly.GetComponent<AI_Ally>().health - enemyDamage);
                         Debug.Log("I'm Attacking ally");
                         countDown = 1f / fireRate;
-                    }
+
+                    //Update the enemies healthbar here
+                    Transform closestAllyCanvas = _closestAlly.transform.GetChild(0);
+                    Transform ourHealthBarTransform = closestAllyCanvas.transform.GetChild(0);
+
+                    Image enemyHealthBar = ourHealthBarTransform.GetComponent<Image>();
+                    float enemysHealth = _closestAlly.GetComponent<AI_Ally>().health;
+                    enemyHealthBar.fillAmount = enemysHealth / enemyMaxHealth;
+                }
 
                 countDown -= Time.deltaTime;
             }
@@ -189,6 +203,7 @@ void Start()
         }
 
     }
+
 
     void attackLaser()
     {

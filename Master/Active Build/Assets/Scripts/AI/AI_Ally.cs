@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class AI_Ally : MonoBehaviour
 {
 
     public GameObject closestAlly;
+    public string shipName;
+    public int aiShipLevel;
     public float health;
+    public float maxHealth;
     public string enemyShipTag = "Enemy";
     public float countDown = 0f;
     public float fireRate = 1f;
@@ -19,12 +23,18 @@ public class AI_Ally : MonoBehaviour
     {
 
         StartCoroutine(CheckForShipsTimer(10f));
+        LookDirection();
+
+        maxHealth = health;
+
 
     }
 
 	// Update is called once per frame
 	void Update ()
     {
+
+
         //Kill the ally ship
         if (health <= 0)
         {
@@ -109,6 +119,7 @@ public class AI_Ally : MonoBehaviour
 
             GameObject _closestAlly = closestAlly.gameObject;
             float allyHealth = _closestAlly.GetComponent<AI_Ship>().health;
+            float enemyMaxHealth = _closestAlly.GetComponent<AI_Ship>().maxHealth;
 
             if (allyHealth - 1 >= 0)
             {
@@ -119,6 +130,14 @@ public class AI_Ally : MonoBehaviour
                     _closestAlly.GetComponent<AI_Ship>().health = (_closestAlly.GetComponent<AI_Ship>().health - enemyDamage);
                     Debug.Log("I'm Attacking ally");
                     countDown = 1f / fireRate;
+
+                    //Update the enemies healthbar here
+                    Transform closestAllyCanvas = _closestAlly.transform.GetChild(0);
+                    Transform ourHealthBarTransform = closestAllyCanvas.transform.GetChild(0);
+
+                    Image enemyHealthBar = ourHealthBarTransform.GetComponent<Image>();
+                    float enemysHealth = _closestAlly.GetComponent<AI_Ship>().health;
+                    enemyHealthBar.fillAmount = enemysHealth / enemyMaxHealth;
                 }
 
                 countDown -= Time.deltaTime;
@@ -133,6 +152,14 @@ public class AI_Ally : MonoBehaviour
                 }
             }
         }
+
+    }
+
+    void LookDirection()
+    {
+
+        GameObject hub = GameObject.FindGameObjectWithTag("Hub");
+        transform.rotation = Quaternion.LookRotation (transform.position - hub.transform.position);
 
     }
 
