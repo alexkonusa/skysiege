@@ -18,9 +18,11 @@ public class AI_Ally : MonoBehaviour
 
     public bool shipFound;
 
-
+    WaveManager waveManager;
     void Start()
     {
+
+        waveManager = GameObject.Find("GameManagers").GetComponent<WaveManager>();
 
         StartCoroutine(CheckForShipsTimer(10f));
         LookDirection();
@@ -37,8 +39,7 @@ public class AI_Ally : MonoBehaviour
 
         //Kill the ally ship
         if (health <= 0)
-        {
-
+        { 
             Destroy(gameObject);
 
         }

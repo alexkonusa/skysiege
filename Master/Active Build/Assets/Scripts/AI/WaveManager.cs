@@ -24,6 +24,7 @@ public class WaveManager : MonoBehaviour
     public int test = 0;
 
     public List<GameObject> StoreOurEnemies = new List<GameObject>();
+    public List<GameObject> CurrentActiveEnemies = new List<GameObject>();
 
     Grid_Spawner gridSpawner;
 
@@ -31,8 +32,6 @@ public class WaveManager : MonoBehaviour
     {
 
         gridSpawner = GameObject.FindGameObjectWithTag("Map").GetComponent<Grid_Spawner>();
-
-        CalculatingNumberOfShipsToSpawn(index);
 
     }
 
@@ -42,12 +41,14 @@ public class WaveManager : MonoBehaviour
         foreach (GameObject enemy in StoreOurEnemies.ToArray())
         {
 
+
             int spawnPoint = Random.Range(0, (gridSpawner.hexLayerThree.Count));
             GameObject ourPickedHex = gridSpawner.hexLayerThree[spawnPoint].gameObject;
 
-            GameObject enemyToInst = (GameObject)Instantiate(enemy.gameObject, gridSpawner.hexLayerThree[spawnPoint].transform.position, 
+            GameObject enemyToInst = (GameObject)Instantiate(enemy.gameObject, gridSpawner.hexLayerThree[spawnPoint].transform.position,
                 gridSpawner.hexLayerThree[spawnPoint].transform.rotation);
 
+            CurrentActiveEnemies.Add(enemy.gameObject);
             StoreOurEnemies.Remove(enemy.gameObject);
             test++;
 

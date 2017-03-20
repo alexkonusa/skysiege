@@ -20,6 +20,7 @@ public class AI_Ship : MonoBehaviour
 
     GameObject hub;
     LineRenderer lineRenderer;
+    WaveManager waveManager;
 
     public enum AttackType
     {
@@ -30,6 +31,7 @@ public class AI_Ship : MonoBehaviour
 
     void Start()
     {
+        waveManager = GameObject.Find("GameManagers").GetComponent<WaveManager>();
 
         StartCoroutine(CheckForShipsTimer(10));
 
@@ -58,7 +60,7 @@ public class AI_Ship : MonoBehaviour
         //Kill the ship
         if (health <= 0)
         {
-
+            GameObject.Find("GameManagers").GetComponent<WaveManager>().CurrentActiveEnemies.RemoveAt(0);
             Destroy(gameObject);
 
         }
