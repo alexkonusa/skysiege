@@ -6,12 +6,13 @@ public class WaveMachine : MonoBehaviour
 {
 
     public float startTimer;
+    public float maxTimer;
     public int waveCounter = 0;
+    public Text waveTimerText;
     public Text waveTimer;
 
-    public bool addToWaveCounter = true; 
     public bool startWave = false;
-    public bool checkIfThereAreNoEnemies = true; // if this is true then next wave wont spawn
+    public bool test = false;
 
     WaveManager waveManager;
 
@@ -19,7 +20,9 @@ public class WaveMachine : MonoBehaviour
     {
 
         waveManager = GameObject.Find("GameManagers").GetComponent<WaveManager>();
+        StartCoroutine(timer(45f));
 
+        maxTimer = startTimer;
     }
 
     void Update()
@@ -35,6 +38,7 @@ public class WaveMachine : MonoBehaviour
         {
 
             startTimer -= Time.deltaTime;
+            waveTimerText.text = "Next Wave Starts In: ";
             waveTimer.text = "" + Mathf.Round(startTimer);
 
             if (startTimer < 0)
@@ -43,56 +47,37 @@ public class WaveMachine : MonoBehaviour
                 startWave = true;
                 waveManager.CalculatingNumberOfShipsToSpawn(waveCounter);
 
+                waveTimerText.text = "";
                 waveTimer.text = "";
-
-                if (startWave == true)
-                {
-
-
-                    CheckIfThereAreNoEnemiesLeft();
-
-                }
 
             }
 
-
         }
-
     }
 
     void CheckIfThereAreNoEnemiesLeft()
     {
 
-        if (waveManager.CurrentActiveEnemies.Count == 0 && checkIfThereAreNoEnemies == true)
+        if (startWave == true && waveManager.CurrentActiveEnemies.Count == 0)
         {
 
+            startWave = false;
+            waveCounter++;
+            StartWave();
 
-                checkIfThereAreNoEnemies = false;
-                SpawnNextWave(1);
-                checkIfThereAreNoEnemies = true;
         }
 
     }
 
-    void SpawnNextWave(int wave)
+    IEnumerator timer(float time)
     {
 
-        if (checkIfThereAreNoEnemies == false)
+        while (true)
         {
-            startTimer -= Time.deltaTime;
-            waveTimer.text = "" + Mathf.Round(startTimer);
-
-            if (startTimer < 0)
-            {
-
-                startWave = true;
-                waveManager.CalculatingNumberOfShipsToSpawn(waveCounter);
-
-                waveTimer.text = "";
-
-            }
+            yield return new WaitForSeconds(time);
+            startTimer = maxTimer;
+            CheckIfThereAreNoEnemiesLeft();
 
         }
-
     }
 }
