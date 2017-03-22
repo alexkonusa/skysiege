@@ -6,8 +6,8 @@ public class StatsManager : MonoBehaviour
 {
 
 	//Resources
-	public static int materials = 9999;
-	public static int gold = 9999;
+	public static int materials = 1000;
+	public static int gold = 200;
 
 	//Extras
 	public static int shipStorage;

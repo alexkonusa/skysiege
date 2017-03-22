@@ -165,8 +165,8 @@ MonoBehaviour:
   enemyDamage: 10
   hubDamage: 0.2
   laserTimer: 1
-  GoldDrop: 0
-  MatDrop: 0
+  GoldDrop: 25
+  MatDrop: 125
   enemyShipTag: AllyShip
   shipFound: 0
   attackHub: 1

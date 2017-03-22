@@ -475,7 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaveData:
   - roundName: Wave 1
-    numberOfShips: 200
+    numberOfShips: 1
     ship1Precentage: 100
     ship2Precentage: 0
     ship3Precentage: 0
@@ -511,22 +511,22 @@ MonoBehaviour:
     ship5Precentage: 0
   - roundName: Wave 6
     numberOfShips: 10
-    ship1Precentage: 50
-    ship2Precentage: 50
+    ship1Precentage: 75
+    ship2Precentage: 25
     ship3Precentage: 0
     ship4Precentage: 0
     ship5Precentage: 0
   - roundName: Wave 7
     numberOfShips: 10
-    ship1Precentage: 75
-    ship2Precentage: 25
+    ship1Precentage: 50
+    ship2Precentage: 50
     ship3Precentage: 0
     ship4Precentage: 0
     ship5Precentage: 0
   - roundName: Wave 8
     numberOfShips: 14
-    ship1Precentage: 75
-    ship2Precentage: 25
+    ship1Precentage: 25
+    ship2Precentage: 75
     ship3Precentage: 0
     ship4Precentage: 0
     ship5Precentage: 0
@@ -579,112 +579,112 @@ MonoBehaviour:
     ship3Precentage: 20
     ship4Precentage: 10
     ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
+  - roundName: Wave 16
+    numberOfShips: 30
+    ship1Precentage: 60
+    ship2Precentage: 10
+    ship3Precentage: 10
+    ship4Precentage: 20
+    ship5Precentage: 0
+  - roundName: Wave 17
+    numberOfShips: 30
+    ship1Precentage: 10
+    ship2Precentage: 40
+    ship3Precentage: 20
+    ship4Precentage: 30
+    ship5Precentage: 0
+  - roundName: Wave 18
+    numberOfShips: 30
+    ship1Precentage: 20
+    ship2Precentage: 10
+    ship3Precentage: 30
+    ship4Precentage: 40
+    ship5Precentage: 0
+  - roundName: Wave 19
+    numberOfShips: 30
+    ship1Precentage: 30
+    ship2Precentage: 20
+    ship3Precentage: 30
+    ship4Precentage: 20
+    ship5Precentage: 0
+  - roundName: Wave 20
+    numberOfShips: 35
     ship1Precentage: 100
     ship2Precentage: 0
     ship3Precentage: 0
     ship4Precentage: 0
     ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
+  - roundName: Wave 21
+    numberOfShips: 32
+    ship1Precentage: 0
+    ship2Precentage: 100
     ship3Precentage: 0
     ship4Precentage: 0
     ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
+  - roundName: Wave 22
+    numberOfShips: 32
+    ship1Precentage: 20
+    ship2Precentage: 20
+    ship3Precentage: 20
+    ship4Precentage: 40
+    ship5Precentage: 0
+  - roundName: Wave 23
+    numberOfShips: 32
+    ship1Precentage: 0
+    ship2Precentage: 50
+    ship3Precentage: 50
+    ship4Precentage: 0
+    ship5Precentage: 0
+  - roundName: Wave 24
+    numberOfShips: 32
+    ship1Precentage: 25
+    ship2Precentage: 50
+    ship3Precentage: 25
+    ship4Precentage: 0
+    ship5Precentage: 0
+  - roundName: Wave 25
+    numberOfShips: 5
+    ship1Precentage: 0
     ship2Precentage: 0
     ship3Precentage: 0
     ship4Precentage: 0
+    ship5Precentage: 100
+  - roundName: Wave 26
+    numberOfShips: 32
+    ship1Precentage: 30
+    ship2Precentage: 30
+    ship3Precentage: 20
+    ship4Precentage: 20
     ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
+  - roundName: Wave 27
+    numberOfShips: 32
+    ship1Precentage: 10
+    ship2Precentage: 70
+    ship3Precentage: 10
+    ship4Precentage: 10
+    ship5Precentage: 0
+  - roundName: Wave 28
+    numberOfShips: 32
+    ship1Precentage: 20
+    ship2Precentage: 80
     ship3Precentage: 0
     ship4Precentage: 0
     ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
+  - roundName: Wave 29
+    numberOfShips: 32
+    ship1Precentage: 0
+    ship2Precentage: 40
+    ship3Precentage: 40
+    ship4Precentage: 20
     ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
-    ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
-    ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
-    ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
-    ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
-    ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
-    ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
-    ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
-    ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
-    ship5Precentage: 0
-  - roundName: 
-    numberOfShips: 4
-    ship1Precentage: 100
-    ship2Precentage: 0
-    ship3Precentage: 0
-    ship4Precentage: 0
-    ship5Precentage: 0
-  index: 1
+  - roundName: Wave 30
+    numberOfShips: 40
+    ship1Precentage: 0
+    ship2Precentage: 40
+    ship3Precentage: 35
+    ship4Precentage: 23
+    ship5Precentage: 2.5
+  index: 0
   numShip1ToSpawn: 0
   numShip2ToSpawn: 0
   numShip3ToSpawn: 0
