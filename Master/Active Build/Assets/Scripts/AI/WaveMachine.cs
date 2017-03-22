@@ -32,7 +32,7 @@ public class WaveMachine : MonoBehaviour
 
     }
 
-    void StartWave()
+	void StartWave()
     {
         if (startWave == false)
         {

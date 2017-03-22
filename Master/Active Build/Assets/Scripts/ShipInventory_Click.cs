@@ -19,6 +19,8 @@ public class ShipInventory_Click : MonoBehaviour, IPointerEnterHandler, IPointer
 	GameObject objectsParent;
 	BuildManager buildManager;
 
+	public KeyCode HotKey;
+
     void Awake()
     {
         this.gameObject.name = "Ship_" + ID;
@@ -48,6 +50,10 @@ public class ShipInventory_Click : MonoBehaviour, IPointerEnterHandler, IPointer
 	// Update is called once per frame
 	void Update () 
 	{
+		//Hotting the keys up
+		if (Input.GetKeyDown (HotKey)) {
+			OnMouseClick ();
+		}
 
 		//Updating the text prefab with the amount of ships we have avalible. 
 		avalibleShip_Display.text = "" + avalible_Ships;

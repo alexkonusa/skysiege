@@ -13,6 +13,8 @@ public class AI_Ship : MonoBehaviour
     public float enemyDamage = 1f;
     public float hubDamage = 0.2f; //Dmg we deal to the hub
     public float laserTimer = 1.0f;
+	public int GoldDrop;
+	public int MatDrop;
 
     public string enemyShipTag = "AllyShip";
     public bool shipFound = false;
@@ -62,7 +64,9 @@ public class AI_Ship : MonoBehaviour
         {
             GameObject.Find("GameManagers").GetComponent<WaveManager>().CurrentActiveEnemies.RemoveAt(0);
             Destroy(gameObject);
-
+			// Adds Resources on death (Amount set in editor)
+			StatsManager.gold += GoldDrop;
+			StatsManager.materials += MatDrop;
         }
 
     }
