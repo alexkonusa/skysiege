@@ -15,6 +15,7 @@ public class AI_Ship : MonoBehaviour
     public float laserTimer = 1.0f;
 	public int GoldDrop;
 	public int MatDrop;
+    public int pointsToGive = 1000;
 
     public string enemyShipTag = "AllyShip";
     public bool shipFound = false;
@@ -67,6 +68,7 @@ public class AI_Ship : MonoBehaviour
 			// Adds Resources on death (Amount set in editor)
 			StatsManager.gold += GoldDrop;
 			StatsManager.materials += MatDrop;
+            PointsManager.AddPoints(pointsToGive);
         }
 
     }
@@ -218,7 +220,7 @@ public class AI_Ship : MonoBehaviour
         lineRenderer.enabled = true;
         Vector3 position = transform.position;
 
-        Vector3 startPointOffSet = new Vector3(0f, 0.5f, 0f); //End position offset
+        Vector3 startPointOffSet = new Vector3(0f, 0f, 0f); //start position offset
         Vector3 endPointOffSet = new Vector3(0f, 1f, 0f); //End position offset
 
         lineRenderer.SetPosition(0, position + startPointOffSet);

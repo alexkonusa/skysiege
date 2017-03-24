@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
-public class Node : MonoBehaviour 
+public class Node : MonoBehaviour, IPointerClickHandler
 {
 
 	public Material startMat;
@@ -24,12 +25,14 @@ public class Node : MonoBehaviour
 		GetComponentInParent<_HexInfo> ().hexObjectName = this.gameObject.name;
 	}
 
-	void OnMouseDown ()
-	{
+    public void OnPointerClick(PointerEventData eventData)
+    {
 
-		BuildPanelDraw();
 
-	}
+        BuildPanelDraw();
+
+
+    }
 
 	void OnMouseEnter ()
 	{

@@ -9,6 +9,7 @@ public class UI_ArmortSlot : MonoBehaviour
 
     public Image icon;
     public Text description;
+    public int pointsToGive = 256;
 
     int price;
     int materials;
@@ -37,6 +38,7 @@ public class UI_ArmortSlot : MonoBehaviour
                 //costs
                 StatsManager.gold = (StatsManager.gold - price);
                 StatsManager.materials = (StatsManager.materials - materials);
+                PointsManager.AddPoints(pointsToGive);
 
                 //add 1 ship to the inv slot count
                 int addships = 1;

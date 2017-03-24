@@ -10,6 +10,7 @@ public class UI_BuildingSlot : MonoBehaviour
 	public Image icon;
 	public Text description;
 	public Text priceDisplay;
+    public int pointsToAdd = 512;
 
 	int price;
 	int materials;
@@ -58,6 +59,7 @@ public class UI_BuildingSlot : MonoBehaviour
 			//Costs and stuff
 			StatsManager.gold = (StatsManager.gold - price);
 			StatsManager.materials = (StatsManager.materials - materials);
+            PointsManager.AddPoints(pointsToAdd);
 
             //Disable our hex renderer so that the armory is visible
             Transform hexChildToDis = hexLocation.transform.GetChild(1);

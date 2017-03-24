@@ -156,6 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closestAlly: {fileID: 0}
+  repairAndHealPanel: {fileID: 1000011283994012, guid: 14a9dbcd8f19f5347805b140afeeb41a,
+    type: 2}
   shipName: HEHEHE
   aiShipLevel: 0
   health: 100

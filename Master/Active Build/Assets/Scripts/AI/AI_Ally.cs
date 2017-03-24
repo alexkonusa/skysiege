@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class AI_Ally : MonoBehaviour
+public class AI_Ally : MonoBehaviour, IPointerClickHandler
 {
 
     public GameObject closestAlly;
+    public GameObject repairAndHealPanel;
     public string shipName;
     public int aiShipLevel;
     public float health;
@@ -18,6 +20,8 @@ public class AI_Ally : MonoBehaviour
 
     public bool shipFound;
 
+    UIManager uimanager;
+
     void Start()
     {
 
@@ -25,6 +29,8 @@ public class AI_Ally : MonoBehaviour
         LookDirection();
 
         maxHealth = health;
+
+        uimanager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
 
 
     }
@@ -38,6 +44,7 @@ public class AI_Ally : MonoBehaviour
         if (health <= 0)
         { 
             Destroy(gameObject);
+            StatsManager.shipStorage++;
 
         }
 
@@ -126,7 +133,6 @@ public class AI_Ally : MonoBehaviour
 
                     //attack the ship
                     _closestAlly.GetComponent<AI_Ship>().health = (_closestAlly.GetComponent<AI_Ship>().health - enemyDamage);
-                    Debug.Log("I'm Attacking ally");
                     countDown = 1f / fireRate;
 
                     //Update the enemies healthbar here
@@ -144,6 +150,7 @@ public class AI_Ally : MonoBehaviour
             if (allyHealth <= 0)
             {
                 closestAlly = null;
+
                 if (closestAlly == null)
                 {
                     shipFound = false;
@@ -151,6 +158,28 @@ public class AI_Ally : MonoBehaviour
             }
         }
 
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+
+        if (uimanager.panelActive == false)
+        {
+
+            CreateRepairAndHealPanel();
+            uimanager.panelActive = true;
+
+        }
+
+    }
+
+    void CreateRepairAndHealPanel()
+    {
+
+        GameObject repairAndHeal= (GameObject)Instantiate(repairAndHealPanel, repairAndHealPanel.transform.position, repairAndHealPanel.transform.rotation);
+        repairAndHeal.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, true);
+        repairAndHeal.transform.position = GameObject.FindGameObjectWithTag("Canvas").transform.position;
+        ReCall_HealPanel.selectedShip = gameObject;
     }
 
     void LookDirection()
