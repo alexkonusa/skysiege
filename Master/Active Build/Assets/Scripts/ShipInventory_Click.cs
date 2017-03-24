@@ -14,10 +14,12 @@ public class ShipInventory_Click : MonoBehaviour, IPointerEnterHandler, IPointer
 	public GameObject shipPrefab;
     public GameObject shipDescriptionPanel;
     public Material coloredHex;
+    public AudioClip audioClip;
 
 	//Private Variables
 	GameObject objectsParent;
 	BuildManager buildManager;
+    SoundManager soundManager;
 
 	public KeyCode HotKey;
 
@@ -25,6 +27,7 @@ public class ShipInventory_Click : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         this.gameObject.name = "Ship_" + ID;
         shipPrefab.GetComponent<ShipParameters>().invSlot = this.transform.gameObject;
+        soundManager = GetComponent<SoundManager>();
 
 
     }
@@ -66,6 +69,8 @@ public class ShipInventory_Click : MonoBehaviour, IPointerEnterHandler, IPointer
     //When we click the slot if we have ships we can deploy them.
     public void OnMouseClick()
     {
+
+        soundManager.PlaySound(audioClip);
 
         if (avalible_Ships > 0) 
 		{

@@ -11,6 +11,7 @@ public class UI_BuildingSlot : MonoBehaviour
 	public Text description;
 	public Text priceDisplay;
     public int pointsToAdd = 512;
+    public AudioClip audioClips;
 
 	int price;
 	int materials;
@@ -28,8 +29,7 @@ public class UI_BuildingSlot : MonoBehaviour
 		buildPanel = GameObject.FindGameObjectWithTag ("_buildPanel");
 		icon.sprite = this_Building.GetComponent<BuildingObjectInfo>().icon; 
 		description.text = this_Building.GetComponent<BuildingObjectInfo>().description;
-
-		price = this_Building.GetComponent<BuildingObjectInfo> ().price;
+        price = this_Building.GetComponent<BuildingObjectInfo> ().price;
 		materials = this_Building.GetComponent<BuildingObjectInfo> ().materials;
 		priceDisplay.text = "Gold: " + price + " " + "Materials: " + materials;
 
@@ -45,14 +45,13 @@ public class UI_BuildingSlot : MonoBehaviour
 	public void BuildOnClick ()
 	{
 
-		Building ();
-
-	}
+        Building ();
+    }
  
 	void Building ()
 	{
 
-		Debug.Log (StatsManager.gold);
+        Debug.Log (StatsManager.gold);
 
 		if (StatsManager.gold - price >= 0 && StatsManager.materials - materials >= 0) 
 		{

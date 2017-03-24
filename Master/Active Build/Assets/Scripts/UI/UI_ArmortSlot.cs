@@ -14,13 +14,15 @@ public class UI_ArmortSlot : MonoBehaviour
     int price;
     int materials;
 
+    SoundManager soundManager;
+    public AudioClip soundClip;
 	// Use this for initialization
 	void Start ()
     {
 
         icon.sprite = thisShip.GetComponent<BuildingObjectInfo>().icon;
         description.text = thisShip.GetComponent<BuildingObjectInfo>().description;
-
+        soundManager = GetComponent<SoundManager>();
         price = thisShip.GetComponent<BuildingObjectInfo>().price;
         materials = thisShip.GetComponent<BuildingObjectInfo>().materials;
 
@@ -28,6 +30,8 @@ public class UI_ArmortSlot : MonoBehaviour
 
     public void ShipConstruction()
     {
+
+        soundManager.PlaySound(soundClip);
         //check if we have enough gold and materials to construct the ship
         if (StatsManager.gold - price >= 0 && StatsManager.materials - materials >= 0)
         {

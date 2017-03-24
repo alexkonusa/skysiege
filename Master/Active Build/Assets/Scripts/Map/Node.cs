@@ -11,10 +11,13 @@ public class Node : MonoBehaviour, IPointerClickHandler
 	public GameObject buildPanel;
 	public GameObject builtBuilding;
 
+    public AudioClip audioClip;
+
 	string parentName;
 
 	UIManager uimanager;
 	Renderer rend;
+    SoundManager soundManager;
 
 	void Start ()
 	{
@@ -23,12 +26,13 @@ public class Node : MonoBehaviour, IPointerClickHandler
 		uimanager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
 
 		GetComponentInParent<_HexInfo> ().hexObjectName = this.gameObject.name;
+        soundManager = GetComponent<SoundManager>();
 	}
 
     public void OnPointerClick(PointerEventData eventData)
     {
 
-
+        soundManager.PlaySound(audioClip);
         BuildPanelDraw();
 
 

@@ -10,6 +10,8 @@ public class UI_Armory : MonoBehaviour
 	public Transform armoryPanelSlot;
 
 	UIManager uimanager;
+    SoundManager soundManager;
+    public AudioClip audioClip;
 
 	// Use this for initialization
 	void Start () 
@@ -17,8 +19,10 @@ public class UI_Armory : MonoBehaviour
 
 		allyShips = Resources.LoadAll<GameObject>("Prefabs/Ships/Ally");
 		uimanager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
+        soundManager = GetComponent<SoundManager>();
 
-		for (int i = 0; i < allyShips.Length; i++) 
+
+        for (int i = 0; i < allyShips.Length; i++) 
 		{
 
 			Transform create_armorySlots = (Transform)Instantiate(armoryPanelSlot, 
@@ -26,7 +30,7 @@ public class UI_Armory : MonoBehaviour
 
             create_armorySlots.GetComponent<UI_ArmortSlot>().thisShip = allyShips[i].gameObject;
 
-            create_armorySlots.transform.SetParent(armoryPanel, false);
+            create_armorySlots.transform.SetParent(armoryPanel, true);
 			
 		}
 	
@@ -35,7 +39,8 @@ public class UI_Armory : MonoBehaviour
 	public void ClosePanel()
 	{
 
-		Destroy(GameObject.FindGameObjectWithTag("_buildPanel"));
+        soundManager.PlaySound(audioClip);
+        Destroy(GameObject.FindGameObjectWithTag("_buildPanel"));
 		uimanager.panelActive = false;
 
 	}
