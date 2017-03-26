@@ -41,6 +41,6 @@ public class StatsManager : MonoBehaviour
     public static void AvalibleStorage(int avalibleStorage)
     {
         shipStorage = (shipStorage + avalibleStorage);
-        maxShipStorage = shipStorage;
+        maxShipStorage += avalibleStorage;
     }
 }
