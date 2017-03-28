@@ -73,8 +73,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014153025164}
-  m_LocalRotation: {x: -0.7071068, y: -0.00000003071953, z: 0.00000003071953, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 350.76498, y: 402.92, z: -722.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -137,9 +137,9 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014153025164}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: fbaaed00e39cf7343aeeddf99dfa5b14, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
+  m_Avatar: {fileID: 9000000, guid: 036fd91fb59b9e44fbcb962092673b88, type: 3}
+  m_Controller: {fileID: 9100000, guid: 6104468b83f3d7845911d1440ffd83a6, type: 2}
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -210,6 +210,7 @@ MonoBehaviour:
   laserTimer: 1
   GoldDrop: 25
   MatDrop: 125
+  pointsToGive: 1000
   enemyShipTag: AllyShip
   shipFound: 0
   attackHub: 1

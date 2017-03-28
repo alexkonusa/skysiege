@@ -11,6 +11,6 @@ public class ButtonSkippy : MonoBehaviour {
 		GameObject.Find ("GameManagers").GetComponent<WaveMachine> ().startTimer = 5;
 
 	}
-		
+
 
 }

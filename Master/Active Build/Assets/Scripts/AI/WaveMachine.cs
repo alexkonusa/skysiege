@@ -55,7 +55,7 @@ public class WaveMachine : MonoBehaviour
         }
     }
 
-    void CheckIfThereAreNoEnemiesLeft()
+     public void CheckIfThereAreNoEnemiesLeft()
     {
 
         if (startWave == true && waveManager.CurrentActiveEnemies.Count == 0)
