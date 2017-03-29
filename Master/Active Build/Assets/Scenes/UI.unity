@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692528, g: 0.4967872, b: 0.5750856, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -145,9 +145,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   avalible_Ships: 0
+  shipLevel: 0
   avalibleShip_Display: {fileID: 1620534365}
   slotButton: {fileID: 46852176}
   shipPrefab: {fileID: 1000014132816508, guid: 98260c0703832964ea6ec3291fde9bd0, type: 2}
+  shipDescriptionPanel: {fileID: 0}
+  coloredHex: {fileID: 0}
+  audioClip: {fileID: 0}
+  HotKey: 0
 --- !u!114 &46852175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,6 +627,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allyShip: {fileID: 0}
+  normalMat: {fileID: 0}
+  avalibleHexs: []
 --- !u!4 &358152949
 Transform:
   m_ObjectHideFlags: 0
@@ -649,6 +656,7 @@ MonoBehaviour:
   goldDisplay: {fileID: 53636260}
   materialDisplay: {fileID: 932200149}
   shipStoraDisplay: {fileID: 647005477}
+  playerPointDisplay: {fileID: 0}
 --- !u!114 &358152951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,6 +696,7 @@ MonoBehaviour:
   enemyShip5: {fileID: 1000013044517130, guid: 82be6b573fc3f064da08cd7e402bc14a, type: 2}
   test: 0
   StoreOurEnemies: []
+  CurrentActiveEnemies: []
 --- !u!114 &358152952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,9 +1398,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 2
   avalible_Ships: 0
+  shipLevel: 0
   avalibleShip_Display: {fileID: 239507672}
   slotButton: {fileID: 791717169}
   shipPrefab: {fileID: 1000014132816508, guid: 98260c0703832964ea6ec3291fde9bd0, type: 2}
+  shipDescriptionPanel: {fileID: 0}
+  coloredHex: {fileID: 0}
+  audioClip: {fileID: 0}
+  HotKey: 0
 --- !u!114 &791717168
 MonoBehaviour:
   m_ObjectHideFlags: 0
