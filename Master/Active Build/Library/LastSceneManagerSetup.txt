@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Scene_01.unity
+- path: Assets/Scenes/AlexisAwesomeTestScene.unity
   isLoaded: 1
   isActive: 1

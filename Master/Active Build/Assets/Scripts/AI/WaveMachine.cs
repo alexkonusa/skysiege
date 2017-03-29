@@ -49,6 +49,7 @@ public class WaveMachine : MonoBehaviour
 
                 waveTimerText.text = "";
                 waveTimer.text = "";
+		startTimer = maxTimer;
 
             }
 
