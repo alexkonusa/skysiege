@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 8a52e903bb3a5f248afc213f88ec0124, type: 3}
-  description: Build this to expand your ship storage space
+  description: 'Hangar: expands ship storage by 5'
   price: 50
   materials: 250
 --- !u!114 &114000011768706238
@@ -185,4 +185,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722b332d8177a5f4e975028797aeddcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipStorageCountToADD: 5

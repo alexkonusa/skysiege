@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 6cb260e28dd7dad41a7e5c65b41ed974, type: 3}
-  description: Build armory to produce ships
+  description: 'Armoury: Used to build ships.'
   price: 50
   materials: 250
 --- !u!114 &114000012775746556

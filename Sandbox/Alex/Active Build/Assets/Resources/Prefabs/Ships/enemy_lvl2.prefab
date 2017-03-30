@@ -161,12 +161,12 @@ MonoBehaviour:
   health: 100
   maxHealth: 0
   countDown: 0
-  fireRate: 1
-  enemyDamage: 10
+  fireRate: 0.5
+  enemyDamage: 8
   hubDamage: 0.2
   laserTimer: 1
-  GoldDrop: 25
-  MatDrop: 125
+  GoldDrop: 40
+  MatDrop: 50
   pointsToGive: 1000
   enemyShipTag: AllyShip
   shipFound: 0

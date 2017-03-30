@@ -273,14 +273,14 @@ MonoBehaviour:
   closestAlly: {fileID: 0}
   repairAndHealPanel: {fileID: 1000011283994012, guid: 14a9dbcd8f19f5347805b140afeeb41a,
     type: 2}
-  shipName: SUCKIT
+  shipName: Sputnik Offensive Fighter Vessel
   aiShipLevel: 0
-  health: 100
+  health: 125
   maxHealth: 0
   enemyShipTag: Enemy
   countDown: 0
   fireRate: 1
-  enemyDamage: 16
+  enemyDamage: 75
   shootSound: {fileID: 8300000, guid: af3a821df56cc4b46976315e3cb899b4, type: 3}
   deathSound: {fileID: 0}
   minVolRange: 0.23
@@ -297,10 +297,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2121054bd7b55d34696bcf8f7fbdb32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 597ae2b4156e9f04fa71a859b5d264b9, type: 3}
+  icon: {fileID: 21300000, guid: ea67403e69d5cdd4abe57109a2839399, type: 3}
   description: 'Gold: 50 Materils: 250'
-  price: 50
-  materials: 250
+  price: 30
+  materials: 300
 --- !u!114 &114000013661603694
 MonoBehaviour:
   m_ObjectHideFlags: 1
